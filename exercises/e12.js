@@ -5,7 +5,15 @@ import { data } from "../data/data";
 // Return example: 42
 
 export function allPlanetsMoonsCount(data) {
-  // Your code goes here...
+  let totalMoonsCount = 0;
+
+  data.planets.forEach(planet => {
+    if (planet.moonsCount) {
+      totalMoonsCount += planet.moonsCount;
+    }
+  });
+
+  return totalMoonsCount;
 }
 
 
